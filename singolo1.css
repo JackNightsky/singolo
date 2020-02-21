@@ -53,6 +53,18 @@ body {
 
   font-family: "Lato bold", serif;
   font-size: 13px;
+
+  transition: color 0.3s;
+}
+
+.main-menu-item:hover  {
+  color: #f06c64e0;
+  transition: color 0.3s;
+}
+
+.main-menu-item:active  {
+  color: #ff6f66;
+  transition: color 0.3s;
 }
 
 /* breadcrumbs */
