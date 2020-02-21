@@ -1,1 +1,79 @@
 @import "font-face.css";
+
+html {
+  font-family: "Lato regular" serif;
+  background: #fff;
+}
+
+.headerhidden {
+  position: absolute;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  top: -50;
+}
+
+body {
+  margin: 0 auto;
+  width: 1020px;
+  height: 100px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d303a;
+
+  height: 89px;
+
+  border-bottom: 6px solid #323746;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin: 0 auto;
+  width: 940px;
+}
+
+.main-menu {
+  line-height: 0.7;
+}
+
+.main-menu-item {
+  display: inline-block;
+
+  text-transform: uppercase;
+
+  color: #fff;
+  text-decoration: none;
+
+  font-family: "Lato bold", serif;
+  font-size: 13px;
+
+  transition: color 0.3s;
+}
+
+.main-menu-item:hover  {
+  color: #f06c64e0;
+  transition: color 0.3s;
+}
+
+.main-menu-item:active  {
+  color: #ff6f66;
+  transition: color 0.3s;
+}
+
+/* breadcrumbs */
+.main-menu .item+.item:before {
+  padding: 8px;
+  color: #494e62;
+  content: "·";
+}
+
+.active {
+  color: #f06c64;
+}
