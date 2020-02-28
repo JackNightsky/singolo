@@ -79,12 +79,12 @@
 /* singolo2 start */
 @font-face {
   font-family: 'singolo2';
-  src: url('../font/singolo2.eot?92990758');
-  src: url('../font/singolo2.eot?92990758#iefix') format('embedded-opentype'),
-       url('../font/singolo2.woff2?92990758') format('woff2'),
-       url('../font/singolo2.woff?92990758') format('woff'),
-       url('../font/singolo2.ttf?92990758') format('truetype'),
-       url('../font/singolo2.svg?92990758#singolo2') format('svg');
+  src: url('../assets/fonts/singolo2.eot?92990758');
+  src: url('../assets/fonts/singolo2.eot?92990758#iefix') format('embedded-opentype'),
+       url('../assets/fonts/singolo2.woff2?92990758') format('woff2'),
+       url('../assets/fonts/singolo2.woff?92990758') format('woff'),
+       url('../assets/fonts/singolo2.ttf?92990758') format('truetype'),
+       url('../assets/fonts/singolo2.svg?92990758#singolo2') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -99,7 +99,7 @@
 }
 */
  
- [class^="icon-"]:before, [class*=" icon-"]:before {
+ [class*="social-icon "] {
   font-family: "singolo2";
   font-style: normal;
   font-weight: normal;
