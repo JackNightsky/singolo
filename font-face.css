@@ -1,27 +1,27 @@
 @font-face {
   font-family: "Lato lighter";
-  src: url("/assets/fonts/Lato-Light.ttf");
+  src: url("assets/fonts/Lato-Light.ttf");
   font-weight: lighter;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato regular";
-  src: url("/assets/fonts/Lato-Regular.ttf");
+  src: url("assets/fonts/Lato-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato bold";
-  src: url("/assets/fonts/Lato-Bold.ttf");
+  src: url("assets/fonts/Lato-Bold.ttf");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato black";
-  src: url("/assets/fonts/Lato-Black.ttf");
+  src: url("assets/fonts/Lato-Black.ttf");
   font-weight: 900;
   font-style: normal;
 }
@@ -30,12 +30,12 @@
 
 @font-face {
   font-family: 'singolo';
-  src: url('../assets/fonts/singolo.eot?49811475');
-  src: url('../assets/fonts/singolo.eot?49811475#iefix') format('embedded-opentype'),
-       url('../assets/fonts/singolo.woff2?49811475') format('woff2'),
-       url('../assets/fonts/singolo.woff?49811475') format('woff'),
-       url('../assets/fonts/singolo.ttf?49811475') format('truetype'),
-       url('../assets/fonts/singolo.svg?49811475#singolo') format('svg');
+  src: url('assets/fonts/singolo.eot?49811475');
+  src: url('assets/fonts/singolo.eot?49811475#iefix') format('embedded-opentype'),
+       url('assets/fonts/singolo.woff2?49811475') format('woff2'),
+       url('assets/fonts/singolo.woff?49811475') format('woff'),
+       url('assets/fonts/singolo.ttf?49811475') format('truetype'),
+       url('assets/fonts/singolo.svg?49811475#singolo') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -79,12 +79,12 @@
 /* singolo2 start */
 @font-face {
   font-family: 'singolo2';
-  src: url('../assets/fonts/singolo2.eot?92990758');
-  src: url('../assets/fonts/singolo2.eot?92990758#iefix') format('embedded-opentype'),
-       url('../assets/fonts/singolo2.woff2?92990758') format('woff2'),
-       url('../assets/fonts/singolo2.woff?92990758') format('woff'),
-       url('../assets/fonts/singolo2.ttf?92990758') format('truetype'),
-       url('../assets/fonts/singolo2.svg?92990758#singolo2') format('svg');
+  src: url('assets/fonts/singolo2.eot?92990758');
+  src: url('assets/fonts/singolo2.eot?92990758#iefix') format('embedded-opentype'),
+       url('assets/fonts/singolo2.woff2?92990758') format('woff2'),
+       url('assets/fonts/singolo2.woff?92990758') format('woff'),
+       url('assets/fonts/singolo2.ttf?92990758') format('truetype'),
+       url('assets/fonts/singolo2.svg?92990758#singolo2') format('svg');
   font-weight: normal;
   font-style: normal;
 }
