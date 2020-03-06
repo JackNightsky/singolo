@@ -99,7 +99,8 @@
 }
 */
  
- [class*="social-icon "] {
+ [class*="social-icon "],
+ [class*="contact-icon "] {
   font-family: "singolo2";
   font-style: normal;
   font-weight: normal;
