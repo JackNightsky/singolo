@@ -177,7 +177,7 @@ body {
     height: 483px;
     width: 240px;
 
-    background-image: url(/assets/iPhone-Vertical.png);
+    background-image: url(assets/iPhone-Vertical.png);
     background-repeat: no-repeat;
     transform: translate(10px, -3px);
 }
@@ -194,7 +194,7 @@ body {
     height: 240px;
     width: 483px;
 
-    background-image: url(/assets/iPhone-Horizontal.png);
+    background-image: url(assets/iPhone-Horizontal.png);
     background-repeat: no-repeat;
     transform: translate(-10px, -3px);
 }
