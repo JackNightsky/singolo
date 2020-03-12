@@ -234,14 +234,14 @@
         cursus commodo, tortor mauris condimentum nibh.</p>
     </section>
     <section class="feedback wrapper">
-      <form name="feedback" class="form" action="GET">
-        <input class="input txt" type="text" name="" id="" placeholder="Name (Required)" required>
-        <input class="input txt" type="email" name="" id="" placeholder="Email (Required)" required>
-        <input class="input txt" type="text" name="" id="" placeholder="Subject">
-        <textarea class="input textarea" name="" id="" cols="30" wrap="off"
+      <form id='feedback-form' name="feedback" class="form" action="GET">
+        <input class="input txt" type="text" name="" id="form-name" placeholder="Name (Required)" required>
+        <input class="input txt" type="email" name="" id="form-email" placeholder="Email (Required)" required>
+        <input class="input txt" type="text" name="" id="form-subject" placeholder="Subject">
+        <textarea class="input txt textarea" name="" id="form-describe" cols="30" wrap="off"
           placeholder="Describe your project in detail..."></textarea>
 
-        <input class="input submit" type="submit" value="Send">
+        <input id="formSend" class="input submit" type="submit" value="Send">
       </form>
       <div id="contact" class="contact">
         <h3 class="h3">Contact Information</h3>
@@ -270,6 +270,17 @@
       </div>
     </section>
   </footer>
+  <div id="message-block" class="hidden">
+    <div id="message" class="message">
+      <h2 class="title">Письмо отправлено</h2>
+      <p id="name-value" >Name: <span class="result"></span></p>
+      <p id="email-value" >Email: <span class="result"></span></p>
+      <p id="subject-value" >Subject: <span class="result"></span></p>
+      <p id="description-value" >Description: <span class="result"></span></p>
+      <button id="close-popup-btn" class="btn-close">OK</button>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 

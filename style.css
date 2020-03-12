@@ -551,7 +551,8 @@ body {
     letter-spacing: 0.4px;
 }
 
-.input.submit {
+.input.submit,
+#message-block .btn-close {
     align-self: flex-end;
 
     padding: 8px 0 13px 8px;
@@ -567,7 +568,8 @@ body {
 }
 
 .input:hover,
-.input:focus {
+.input:focus,
+#message-block .btn-close:hover {
     outline: none;
     place-content: none;
 
@@ -576,7 +578,8 @@ body {
     transition: "box-shadow"0.5s;
 }
 
-.input.submit:hover {
+.input.submit:hover,
+#message-block .btn-close:hover {
     cursor: pointer;
 
     color: #d6564f;
@@ -587,7 +590,8 @@ body {
     transition: "box-shadow"0.3s;
 }
 
-.input.submit:active {
+.input.submit:active,
+#message-block .btn-close:active {
     cursor: pointer;
     box-shadow: 2px 2px 2px indianred;
     transform: translate(5px, 5px);
@@ -717,3 +721,61 @@ body {
     transition: 'border-color'0.7s;
     transition: color 0.5s;
 }
+
+/* POPUP MESSAGE */
+
+#message-block {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #1d1f2788;
+}
+
+#message-block.hidden {
+    display: none;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    overflow: hidden;
+    min-width: 30%;
+    
+    color: #eeeeee;
+
+    background-color: #f06c64;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: 2px solid #d6564f;
+    border-radius: 30px;
+    text-align: justify;
+}
+s
+.message .title {
+    font-family: "Lato bold", sans-serif;
+}
+
+.message .result {
+    font-family: "Lato regular", sans-serif;
+    font-style: italic;
+}
+
+#message-block .btn-close {
+    width: 100px;
+    align-self: center;
+
+    padding: 8px 0 10px 5px;
+
+    border: 0;
+    border-radius: 15px;
+
+    color: white;
+    background-color: #d6564f;
+}
+
