@@ -1,13 +1,41 @@
 const HEADER_MAIN_MENU = document.getElementById("header-main-menu");
+const PORTFOLIO_MENU = document.getElementById("portfolio-menu");
 const PORTFOLIO_GALERY = document.getElementById("portfolio-galery");
 const FORM_SEND = document.getElementById("formSend");
 const CLOSE_BUTTON = document.getElementById("close-popup-btn")
+const galery = Array.from(PORTFOLIO_GALERY.children);
+
 
 HEADER_MAIN_MENU.addEventListener('click', (event) => {
     HEADER_MAIN_MENU.querySelectorAll('a')
                   .forEach(el => el.classList.remove("active"));
     event.target.classList.add("active");
 });
+
+PORTFOLIO_MENU.addEventListener('click', (event) => {
+    const target = event.target;
+    PORTFOLIO_MENU.querySelectorAll('.menu-item')
+                  .forEach(el => el.classList.remove("active"));
+    target.classList.add("active");
+    
+    if (target.innerHTML.toLowerCase() === "all") {
+        while (PORTFOLIO_GALERY.firstChild) {
+            PORTFOLIO_GALERY.removeChild(PORTFOLIO_GALERY.firstChild);
+        }
+        galery.forEach(el => PORTFOLIO_GALERY.append(el));
+    }
+    else {
+        let listChild = Array.from(PORTFOLIO_GALERY.children);
+        while (PORTFOLIO_GALERY.firstChild) {
+            PORTFOLIO_GALERY.removeChild(PORTFOLIO_GALERY.firstChild);
+        }
+        let tmp = listChild.pop();
+        listChild.unshift(tmp);
+        listChild.forEach(el => PORTFOLIO_GALERY.append(el));
+    }
+});
+
+
 
 PORTFOLIO_GALERY.addEventListener('click', (event) => {
     PORTFOLIO_GALERY.querySelectorAll('.galery-item')

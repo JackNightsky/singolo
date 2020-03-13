@@ -336,14 +336,14 @@ body {
     font-size: 11.7px;
     color: #767e9e;
     text-decoration: none;
-
-    opacity: 1;
-    transition: 0.3s;
+    
+    transition: color border 0.2s;
 }
 
 .nav-btn.active {
     color: #dedede;
     border-color: #dedede;
+    transition: 0.3s;
 }
 
 .nav-btn:hover {
