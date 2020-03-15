@@ -602,6 +602,8 @@ body {
 
     box-shadow: none;
     transition: box-shadow 0.3s;
+
+    user-select: none;
 }
 
 .get_a_quote .input.txt {
@@ -822,6 +824,7 @@ body {
 
     overflow: hidden;
     min-width: 30%;
+    max-width: 35%;
     
     color: #eeeeee;
 
@@ -829,7 +832,7 @@ body {
 
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 40%;
     border: 2px solid #d6564f;
     border-radius: 30px;
     text-align: justify;
@@ -856,4 +859,6 @@ s
 
     color: white;
     background-color: #d6564f;
+
+    user-select: none;
 }

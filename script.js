@@ -1,6 +1,7 @@
 const HEADER_MAIN_MENU = document.getElementById("header-main-menu");
 const PORTFOLIO_MENU = document.getElementById("portfolio-menu");
 const PORTFOLIO_GALERY = document.getElementById("portfolio-galery");
+const FORM = document.getElementById("feedback-form");
 const FORM_SEND = document.getElementById("formSend");
 const CLOSE_BUTTON = document.getElementById("close-popup-btn")
 const galery = Array.from(PORTFOLIO_GALERY.children);
@@ -69,30 +70,29 @@ PORTFOLIO_GALERY.addEventListener('click', (event) => {
 
 // FORMS
 
+FORM.addEventListener("submit", (e) => e.preventDefault());
+
 FORM_SEND.addEventListener("click", (event) => {
-    const form = document.getElementById("feedback-form");
     const name = document.getElementById("form-name").value.toString();
     const email = document.getElementById("form-email").value.toString();
-    if (!name || !email) return false;
+    if (!name || !email || !email.match(/[^@ \t\r\n]+@[^@ ! \t\r\n]+\.[^@ \t\r\n]+/)) return false;
 
-    const subject = document.getElementById("form-subject").value.toString() || "Без темы";
-    const describe = document.getElementById("form-describe").value.toString() || "Без описания";
+    const subject = document.getElementById("form-subject").value.toString();
+    const describe = document.getElementById("form-describe").value.toString();
     const popup = document.getElementById("message-block");
     let result = [name,email,subject,describe];
-    popup.querySelectorAll(".result").forEach((el,idx) => {
-        if (result[idx] === "Без темы") el.parentElement.innerHTML = result[idx];
-        if (result[idx] === "Без описания") el.parentElement.innerHTML = result[idx];
-        else el.innerHTML = result[idx];
-    });
-
+    console.log(result);
+    document.getElementById("name-value").innerHTML = `Name: ${name}`;
+    document.getElementById("email-value").innerHTML = `Email: ${email}`;
+    document.getElementById("subject-value").innerHTML = !subject ? "No subject" :  `Subject: ${subject}`;
+    document.getElementById("description-value").innerHTML = !describe ? "No describe" : `Describe: ${describe}`;
     popup.classList.remove('hidden');
-    event.preventDefault();
+    
 });
 
 CLOSE_BUTTON.addEventListener("click", (event) => {
-    const form = document.getElementById("feedback-form");
     const popup = document.getElementById("message-block");
-    popup.querySelectorAll(".result").forEach(el => el.innerHTML = "");
-    form.reset();
+    
+    FORM.reset();
     popup.classList.add('hidden');
 });
