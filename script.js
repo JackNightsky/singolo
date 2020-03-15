@@ -4,13 +4,37 @@ const PORTFOLIO_GALERY = document.getElementById("portfolio-galery");
 const FORM_SEND = document.getElementById("formSend");
 const CLOSE_BUTTON = document.getElementById("close-popup-btn")
 const galery = Array.from(PORTFOLIO_GALERY.children);
+const scrollLeft = document.getElementById("slider-control-left");
+const scrollRight = document.getElementById("slider-control-right");
 
+// HEADER
 
 HEADER_MAIN_MENU.addEventListener('click', (event) => {
     HEADER_MAIN_MENU.querySelectorAll('a')
                   .forEach(el => el.classList.remove("active"));
     event.target.classList.add("active");
 });
+
+// SLIDER
+function changeCard() {
+    const cardsConteiner = document.getElementById("cards-container");
+    cardsConteiner.querySelectorAll(".card").forEach(el => {
+        el.classList.toggle("active");
+        if (el.classList.contains("active")) {
+            document.getElementById("slider").style.backgroundColor = el.classList[0];
+        }
+    });
+}
+
+scrollLeft.addEventListener("click", changeCard);
+
+scrollRight.addEventListener("click", changeCard);
+
+
+
+
+
+// PORTFOLIO
 
 PORTFOLIO_MENU.addEventListener('click', (event) => {
     const target = event.target;
@@ -35,15 +59,15 @@ PORTFOLIO_MENU.addEventListener('click', (event) => {
     }
 });
 
-
-
 PORTFOLIO_GALERY.addEventListener('click', (event) => {
     PORTFOLIO_GALERY.querySelectorAll('.galery-item')
-                  .forEach(el => el.classList.remove("active"));
+                    .forEach(el => el.classList.remove("active"));
     if (event.target.classList.contains("galery-item")) {
         event.target.classList.add("active");
     }
 });
+
+// FORMS
 
 FORM_SEND.addEventListener("click", (event) => {
     const form = document.getElementById("feedback-form");
