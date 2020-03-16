@@ -7,6 +7,7 @@ const CLOSE_BUTTON = document.getElementById("close-popup-btn")
 const galery = Array.from(PORTFOLIO_GALERY.children);
 const scrollLeft = document.getElementById("slider-control-left");
 const scrollRight = document.getElementById("slider-control-right");
+const btnHome = document.getElementsByClassName("phone-btn");
 
 // HEADER
 
@@ -30,6 +31,10 @@ function changeCard() {
 scrollLeft.addEventListener("click", changeCard);
 
 scrollRight.addEventListener("click", changeCard);
+
+[...btnHome].forEach(el => el.addEventListener("click", (event) => {
+    event.target.parentElement.querySelector('.screen').classList.toggle("hidden");
+}));
 
 
 
