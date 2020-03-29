@@ -101,3 +101,7 @@ CLOSE_BUTTON.addEventListener("click", (event) => {
     FORM.reset();
     popup.classList.add('hidden');
 });
+
+// SCROLL
+
+document.addEventListener('scroll', onScroll);
